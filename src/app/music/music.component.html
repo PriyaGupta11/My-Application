@@ -1,0 +1,48 @@
+
+<div class="row"> 
+    <div class="card col-sm-12" style="width:400px; margin-left:10%; margin-top:1%" *ngFor="let music of musics">
+        <img class="card-img-top img-responsive" src="../assets/covers/{{music.cover}}.jpg"
+         style="border-radius:50%;" alt="card image"/>
+        <div class="card-body">
+            <h4 class="card-title"><strong>{{music.name}} </strong></h4>
+            <p class="card-text">{{music.bio}}</p>
+            <a href="#demo{{music.id}}" class="btn btn-primary" data-toggle="collapse">
+                See Albums</a>
+          
+            <div id="demo{{music.id}}" class="collapse" style="margin-top:1%;">
+                <div class="row">
+                    <div class="card col-sm-6"  *ngFor="let album of music.albums">
+                        <img class="card-img-top" src="../assets/albums/{{album.cover}}.jpg" 
+                        style="width:60%; height:60%; " alt="card-image"/>
+                            <div class="card-body">
+                                <h4 class="card-title">{{album.title}}</h4>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="row"> 
+    <div class="card" style="width:400px; margin-left:10%; margin-top:4%" *ngFor="let music of musics">
+        <img class="card-img-top img-responsive" src="../assets/covers/{{music.cover}}.jpg" alt="card image"/>
+        <div class="card-body">
+            <h4 class="card-title">{{music.name}}</h4>
+            <p class="card-text">{{music.bio}}</p>
+            <a href="#demo{{music.id}}" class="btn btn-primary" data-toggle="collapse" >See Albums</a>
+            <div id="demo{{music.id}}" class="collapse">
+                <div class="row">
+                    <div class="card col-sm-6" style="width:200px;" *ngFor="let album of music.albums">
+                        <img class="card-img-top" src="../assets/albums/{{album.cover}}.jpg" alt="card-image"/>
+                            <div class="card-body">
+                                <h4 class="card-title">{{album.title}}</h4>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+ 

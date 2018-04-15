@@ -1,0 +1,62 @@
+
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
+
+<div class="row" *ngFor="let music of musics" style="width:80%; margin-left:10%">
+  <!-- <div *ngFor="let arts of music.artists"> -->
+      <div class="row"  >
+    <div class="col-md-6" >
+      <div class="thumbnail" > 
+            <img [src] = "fullImagePath1" alt="Lights" style="width:100%"/>
+            <div class="caption" *ngFor="let arts of music.artists">
+                {{arts.name}}
+            </div>
+            <input type="button" value="See Album" class="btn btn-primary">
+           
+      </div> 
+      <div > fnsdnfsdnfksd</div> 
+      <!-- <div *ngFor="let album of arts.albums">
+          {{album.title}}
+      </div> -->
+     </div>
+     
+    <div class="col-md-6">
+      <div class="thumbnail">
+          <img [src]="fullImagePath2" style="width:100%">
+          <div class="caption" *ngFor="let arts of music.artists">
+              {{arts.name}}
+          </div>
+          <input type="button" value="See Album" class="btn btn-primary">
+      </div>
+    </div> 
+  </div>
+ 
+<div class="row"> 
+      <div class="col-md-6">
+          <div class="thumbnail" >
+              <img [src]="fullImagePath3" style="width:100%; height:350px">
+              <div class="caption" *ngFor="let arts of music.artists">
+                  {{arts.name}}
+              </div>
+              <input type="button" value="See Album" class="btn btn-primary">
+          </div>
+        </div>
+        <div class="col-md-6">
+            <div class="thumbnail" >
+                <img [src]="fullImagePath4" style="width:100%">
+                <div class="caption" *ngFor="let arts of music.artists">
+                    {{arts.name}}
+                </div>
+                <input type="button" value="See Album" class="btn btn-primary">
+            </div>
+          </div>
+  </div> 
+   
+   </div>
+  
+
+
+  
+
+
+
+
