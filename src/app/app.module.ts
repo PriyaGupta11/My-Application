@@ -1,3 +1,4 @@
+import { HeaderComponent } from './header/header.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms'
@@ -13,6 +14,15 @@ import { EmployeeComponent } from './Employee/employee.Component';
 import { FormPoster } from './services/form-poster.service';
 import { EmployeeListComponent } from './Employee/EmployeeList.component';
 import { EmployeeService } from './services/employee.service';
+import { CustomerComponent } from './customer/customer.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import { RegisterComponent } from './register/register.component';
+import { RecipesComponent } from './recipes/recipes.component';
+import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
+import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
+import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-item.component';
+import { ShoppingListComponent } from './shopping-list/shopping-list.component';
+import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 
 
 @NgModule({
@@ -27,17 +37,33 @@ import { EmployeeService } from './services/employee.service';
       {path:'music', component:MusicComponent},
       {path:'employeeList', component:EmployeeListComponent},
       {path:'employee', component:EmployeeComponent},
+      {path:'customer', component:CustomerComponent},
+      {path:'register',component:RegisterComponent},
+      {path:'recipes',component:RecipesComponent},
       {path:'', redirectTo:'home', pathMatch:'full'},
       {path:'**', component:NotFound}
-    ])],
-  declarations: [
+    ]),
+    ReactiveFormsModule],
+    
+    declarations: [
     AppComponent,
     OrderComponent,
     HomeComponent,
     MusicComponent,
     EmployeeComponent,
     EmployeeListComponent,
-    NotFound],  
+    NotFound,
+    CustomerComponent,
+    RegisterComponent,
+    HeaderComponent,
+    RecipesComponent,
+    RecipeListComponent,
+    RecipeDetailComponent,
+    RecipeItemComponent,
+    ShoppingListComponent,
+    ShoppingEditComponent,
+    
+   ],  
   bootstrap: [AppComponent],
   providers:[FormPoster,EmployeeService]
 })

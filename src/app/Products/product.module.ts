@@ -17,8 +17,8 @@ declarations:[
 imports:[
     SharedModule,
     RouterModule.forChild([
-    {path:'products',component:ProductComponent},
-    {path:'products/:id', canActivate: [ProductGaurds] ,component:ProductDetailComponent}
+    {path:'products', component:ProductComponent},
+    {path:'products1/:id', canActivate: [ProductGaurds] ,component:ProductDetailComponent}
     ])
 ],
 providers:[

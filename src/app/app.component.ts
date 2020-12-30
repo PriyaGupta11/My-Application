@@ -13,14 +13,15 @@ enableProdMode();
             <li><a [routerLink] ="['./home']">Home</a></li>
             <li><a [routerLink] ="['./music']">Music</a></li>
             <li><a [routerLink] ="['./movies']">Movies</a></li>
-            <li><a [routerLink] ="['./products']">Products</a></li>
-            <li><a [routerLink] ="['./employee']">Employee</a></li>
-            <li><a [routerLink] ="['./employeeList']">EmployeeList</a></li>
+            <li><a [routerLink] ="['./products']">Products</a></li>            
+            <li><a [routerLink] ="['./employeeList']">Employees</a></li>
             <li><a [routerLink]="['./orders']">Orders</a></li>
+            <li><a [routerLink]= "['./customer']"> Customer </a></li>  
+            <li><a [routerLink]="['./recipes']">Udemy-App</a></li>          
           </ul>
       </div>
    </nav>
-  <div>
+  <div >
       <router-outlet></router-outlet>
     </div>
   </div>`  

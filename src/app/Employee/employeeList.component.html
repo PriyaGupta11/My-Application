@@ -1,41 +1,82 @@
-<div class="panel panel-primary">
-    <div class="panel-heading clearfix">{{title}}
-        <!-- <h4 class="panel-title pull-left" > {{title}}</h4> -->
+
+
+
+    <div class="panel panel-primary" style="height:50%">
+        <div class="panel-heading clearfix">{{title}} (Getting data from WEB API)
         <span class="btn-group pull-right">
-            <button type="button"class="btn btn-info btn">New Employee </button>
-        </span>
-       
+                <button type="button"class="btn btn-info btn" (click)="CreateNewEmployee()">Add New</button>
+        </span>        
         </div> 
         <div class="panel-body">
-            <div class="row">
-            <!-- <div class="col-md-2"> Filter by: /div>
-            <div class="col-md-4"> <input type="text"/> </div>
-        </div> -->
-            <div class="table-responsive"  >
-            <table class="table">
-                <thead>
-                <tr><th><button type="button" class="btn btn-success">Employee</button></th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Full Time</th>
-                    <th>Gender</th>
-                    <th>Coding Language</th>                   
-                </tr>
-                </thead>
-                <tbody>
-                <tr *ngFor= "let employee of employees" >
-                    <td><img></td>
-                    <td>{{employee.firstName}}</td>
-                    <td >{{employee.email}}</td>
-                    <td>{{employee.fullTime}}</td>
-                    <td>{{employee.gender}}</td>
-                    <td>{{employee.codingLang}}</td>                                
-                    </tr> 
-                </tbody>
-            </table>
+            <div class="row">           
+                <div class="table-responsive"  >
+                    <table class="table">
+                        <thead>
+                        <tr><th><button type="button" class="btn btn-success">Employee</button></th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Full Time</th>
+                            <th>Gender</th>
+                            <th>Coding Language</th>  
+                            <th>Action</th>                 
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr *ngFor= "let employee of employees" >
+                            <td><img></td>
+                            <td>{{employee.firstName}}</td>
+                            <td >{{employee.email}}</td>
+                            <td>{{employee.fullTime}}</td>
+                            <td>{{employee.gender}}</td>
+                            <td>{{employee.codingLang}}</td>      
+                            <td> Edit
+                                
+                            </td>                          
+                            </tr> 
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>  
+
+
+<div class="panel panel-primary">
+        <div class="panel-heading clearfix">Emp List (Getting data  from WCF Rest API)
+        </div>
+           <div class="panel-body">
+              <div class="row">           
+                <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                    <tr>                        
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Enroll Year</th>
+                        <th>Class</th>
+                        <th>City</th>
+                        <th>Country</th>
+                                        
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor= "let employee of employeesFromWCF" >
+                        
+                        <td>{{employee.Name}}</td>
+                        <td >{{employee.Email}}</td>
+                        <td>{{employee.EnrollYear}}</td>  
+                        <td>{{employee.Class}}</td>
+                        <td >{{employee.City}}</td>
+                        <td>{{employee.Country}}</td>                                                
+                        </tr> 
+                    </tbody>
+                </table>
+                </div>
+            </div>
         </div>
     </div>
-</div> 
+
+
 
 
     

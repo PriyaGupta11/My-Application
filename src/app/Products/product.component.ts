@@ -16,6 +16,7 @@ imageHeight:5;
 errorMessage;
  
  products:IProduct[];
+ 
    
 constructor(private _productService:ProductService){}
 toggleImage(): void{
@@ -30,6 +31,4 @@ toggleImage(): void{
                   ((error)=> this.errorMessage = error)
     }
 
-}
-
-      
+} 

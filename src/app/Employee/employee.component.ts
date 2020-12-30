@@ -10,7 +10,7 @@
     export class EmployeeComponent{
     language= ["Angular","React","NodeJs"]
 
-    model = new Employee(0,'Priya','Gupta','a@a.com','abc',true, 'female', '')
+    model = new Employee(0,'Priya','Gupta','a@a.com','abc','', true,'')
     hasCodeLangError=false;
     btnDisabled=false;
     constructor(private formPoster:FormPoster){}
